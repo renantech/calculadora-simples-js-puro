@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #212121;
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  width: 90%;
+  /* Adicionado para tornar o contêiner responsivo */
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form input,
+form label,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
+
+h1 {
+  text-align: center;
+}
+
+.container-calculator {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  margin-top: 5px;
+}
+
+.calculator {
+  width: 100%;
+}
+
+.input-calc {
+  display: flex;
+  align-items: center;
+}
+
+input[type='text'] {
+  width:31vw;
+  flex: 1;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+input[type='button'] {
+  width: 15%;
+  height: 5em;
+  outline: 0;
+  border: 0;
+  font-size: 20px;
+}
+
+input[type='button']:hover {
+  cursor: pointer;
+}
+
+.row-3 .btn-clear {
+  width: 31%;
+}
+
+.row-4 .zero {
+  width: 47%;
+}
+
+.row-4 .btn-aws {
+  width: 31%;
+}
+
+.btn-num {
+  background-color: #bdbdbd;
+}
+
+.btn-num:hover {
+  background-color: #757575;
+}
+
+.btn-add,
+.btn-min,
+.btn-mult,
+.btn-div,
+.btn-clear,
+.btn-aws {
+  color: #fff;
+  background-color: #ff5722;
+}
+
+.btn-add:hover,
+.btn-min:hover,
+.btn-mult:hover,
+.btn-div:hover,
+.btn-clear:hover,
+.btn-aws:hover {
+  color: #fff;
+  background-color: #ff8a65;
+}
+
+/* Media queries para ajustar o layout em diferentes tamanhos de tela */
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  form button {
+    margin-top: 20px;
+  }
+
+  input[type='text'] {
+    font-size: 20px;
+  }
+
+  input[type='button'] {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: 30px;
+  }
+
+  form button {
+    margin-top: 10px;
+  }
+
+  input[type='text'] {
+    width: 70vw;
+    font-size: 18px;
+  }
+
+  input[type='button'] {
+    font-size: 14px;
+  }
+}
